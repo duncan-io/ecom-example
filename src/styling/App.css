@@ -13,6 +13,14 @@
   max-height: 80px;
 }
 
+.footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh;
+  max-height: 80px;
+}
+
 .logo{
   color: rgb(2, 226, 2);
 }
@@ -43,9 +51,6 @@
   padding: 0rem 8rem;
 }
 
-.mainWelcome{
-  flex-grow: 1;
-}
 
 .headerInfo{
   max-width: 50%;
@@ -59,9 +64,18 @@
 
 .mainWelcome{
   color: rgb(2, 226, 2);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.headerInfo button {
+.mainWelcome h1{
+  font-size: 3rem;
+}
+
+.homeButton {
   background-color: white;
   border: 1px solid rgb(2, 226, 2);
   padding: 5px 10px;
@@ -71,12 +85,42 @@
   font-weight: bold;
 }
 
-.headerInfo button:hover {
+.homeButton:hover {
   background-color: rgb(2, 226, 2);
   border: 1px solid white;
 }
 
 .infoSection{
-  height: 50vh;
+  height: auto;
   background-color: lightgray;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 8rem;
+  gap: 5px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 50%;
+}
+
+.left p{
+  font-size: 1.5 rem;
+  line-height: 2rem;
+}
+
+.right{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoImage{
+  width: 100%;
+  border-radius: 10px;
 }
