@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
         <div className="wrapper">
-            <div className="header">
-                <div className="backgroundImage">
-                    <h1>Welcome to FAKESTORE</h1>
+            <div className="backgroundImage">
+                <div className="header">
+                    <h1 className="mainWelcome">Welcome to FAKESTORE</h1>
                     <div className="headerInfo">
                         <h2>We love everything fake because this is a fake store that is being used as a opportunity to showcase frontend capabilities!</h2>
-                        <button>Learn More!</button>
+                        <Link to="/about"><button>Learn More!</button></Link>
                     </div>
                 </div>
             </div>
