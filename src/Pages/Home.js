@@ -7,8 +7,8 @@ const Home = () => {
             <div className="backgroundImage">
                 <div className="header">
                     <div className="mainWelcome">
-                    <h2>Welcome to</h2>
-                    <h1>FAKESTORE</h1>
+                        <h2>Welcome to</h2>
+                        <h1>FAKESTORE</h1>
                     </div>
                     
                     <div className="headerInfo">

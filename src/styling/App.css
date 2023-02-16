@@ -11,6 +11,7 @@
   align-items: center;
   height: 12vh;
   max-height: 80px;
+  border-bottom: 1px solid black;
 }
 
 .footer{
@@ -52,7 +53,7 @@
 }
 
 
-.headerInfo{
+.headerInfo, .aboutInfo{
   max-width: 50%;
   color: white;
   display: flex;
@@ -123,4 +124,52 @@
 .infoImage{
   width: 100%;
   border-radius: 10px;
+}
+
+.aboutWelcome{
+  text-align: center;
+}
+
+.aboutBgImage{
+  height: 25vh;
+}
+
+.aboutInfo{
+  font-size: 1 rem;
+}
+
+.aboutImage{
+  margin-right: 1.5rem;
+}
+
+.itemImage{
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.productList{
+  margin: 1rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.itemCard{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.itemUtils{
+  width: 70%;
+}
+
+.shopWrapper{
+  padding: 2rem 3rem;
+  height: 100vh;
 }
