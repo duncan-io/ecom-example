@@ -1,6 +1,6 @@
 import React from "react";
 
-const Shop = () => {
+const Shop = ({addCart}) => {
   const items = [
     {
       itemName: "Tulips",
@@ -39,6 +39,7 @@ const Shop = () => {
       <h2>Our Products</h2>
       <div className="productList">
         {items.map((item) => {
+          
           return (
             <div key={item.itemName} className="itemCard">
               <img
@@ -51,7 +52,7 @@ const Shop = () => {
                   <h5>{item.itemName}</h5>
                   <p>${item.itemPrice}</p>
                 </div>
-                <button className="homeButton">Add to Cart</button>
+                <button className="homeButton" onClick={()=>addCart(item)}>Add to Cart</button>
               </div>
             </div>
           );
