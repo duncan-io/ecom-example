@@ -196,4 +196,58 @@
   background-color: white; 
   color: rgb(2, 226, 2);
   border-color:rgb(2, 226, 2) ;
+  cursor: pointer;
+}
+
+.cart{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(185, 185, 185, 0.548);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cartItems{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0px 20px;
+}
+
+.exit{
+  font-size: 1.5rem;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.cartBar{
+  background-color: white;
+  padding: 20px;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+}
+
+.hidden{
+  display: none;
+}
+
+.removeButton{
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  padding: 0px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.removeButton:hover{
+  background-color: red;
+  color: white;
 }
