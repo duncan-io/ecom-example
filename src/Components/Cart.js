@@ -1,24 +1,40 @@
-import React, {useRef} from "react";
+import React, {useEffect, useReducer} from "react";
 
 const UpdatedCart = ({ currentCart, hidden, close, removeCart }) => {
-  const newCart = currentCart.current;
+  // const [items, dispatch] = useReducer(reducer, [])
+
+
+  // const reducer = (cartItem, action) => {
+  //   switch (action.type){
+  //     case ACTIONS.REMOVE_STYLE:
+  //       return currentCart.current.map(item => {
+  //         if (item.ItemName === cartItem.itemName) {
+  //           return [...]
+  //         }
+  //       })
+  //     default:
+  //       return currentCart.current
+  //   }
+  // }
   
   const showCheckout = () => {
-    if (newCart.length > 0) {
+    if (currentCart.current.length > 0) {
       return <button className="homeButton">Checkout</button>;
     }
   }
 
+
+
+
   const conditionalPresentation = () => {
-    console.log(`new cart is ${newCart}`)
-    if (newCart.length === 0) {
+    if (currentCart.current.length < 1) {
      
       return <h2>Your cart is empty!</h2>;
     } else {
      
       return (
         <div className="cartItems">
-          {newCart.map((item) => {
+          {currentCart.current.map((item) => {
             return (
               <div key={item.itemName} className="cartCard">
                 <img
@@ -32,7 +48,7 @@ const UpdatedCart = ({ currentCart, hidden, close, removeCart }) => {
                     <p>${item.itemPrice}</p>
                   </div>
                 </div>
-                <button className="removeButton" onClick={() => removeCart(item.itemName)}>Remove</button>
+                <button type="button" className="removeButton" onClick={() => removeCart(item.itemName)}>Remove</button>
               </div>
             );
           })}
@@ -40,6 +56,11 @@ const UpdatedCart = ({ currentCart, hidden, close, removeCart }) => {
       );
     }
   };
+
+  useEffect(() => {
+    conditionalPresentation()
+})
+  
   return (
     <div className={hidden}>
       <div className="cartBar">

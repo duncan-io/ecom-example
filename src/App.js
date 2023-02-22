@@ -18,20 +18,14 @@ const App = () => {
   };
 
   const removeCart = (itemName) => {
-    console.log("remove fired")
-    console.log(itemName)
-    let arrRemoved = cart.filter(item => {
+    setCart(cart.filter(item => {
      return item.itemName !== itemName
-  })
-
-    setCart(arrRemoved)
+  }))
     currentCart.current = cart
   }
 
   useEffect(() => {
     currentCart.current = cart;
-    console.log("useEffect ran");
-    console.log(currentCart.current)
   });
 
  
