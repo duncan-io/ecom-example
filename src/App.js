@@ -39,7 +39,7 @@ const App = () => {
   }
   return (
     <BrowserRouter>
-      <UpdatedCart currentCart={currentCart} hidden={hidden} close={close} removeCart = {removeCart} />
+      <UpdatedCart currentCart={currentCart} hidden={hidden} close={close}  cart={cart} removeCart = {removeCart} />
       <Nav close={close} cart={cart}/>
       <Routes>
         <Route path="/" element={<Home />} />

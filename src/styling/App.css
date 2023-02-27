@@ -215,6 +215,11 @@
   margin: 10px 0px 20px;
 }
 
+.cartCard{
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .exit{
   font-size: 1.5rem;
   position: fixed;
@@ -250,4 +255,10 @@
 .removeButton:hover{
   background-color: red;
   color: white;
+}
+
+.removed{
+  text-decoration: line-through;
+  color: darkgray;
+  background-color: lightgray;
 }

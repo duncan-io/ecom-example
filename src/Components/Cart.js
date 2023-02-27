@@ -1,6 +1,7 @@
-import React, {useEffect, useReducer} from "react";
+import React, {useReducer, ReactDOM, useState} from "react";
+import CartItems from "./CartItems";
 
-const UpdatedCart = ({ currentCart, hidden, close, removeCart }) => {
+const UpdatedCart = ({ currentCart, hidden, close, removeCart, cart }) => {
   // const [items, dispatch] = useReducer(reducer, [])
 
 
@@ -16,6 +17,8 @@ const UpdatedCart = ({ currentCart, hidden, close, removeCart }) => {
   //       return currentCart.current
   //   }
   // }
+
+  const [removedState, setRemovedState] = useState('')
   
   const showCheckout = () => {
     if (currentCart.current.length > 0) {
@@ -26,48 +29,17 @@ const UpdatedCart = ({ currentCart, hidden, close, removeCart }) => {
 
 
 
-  const conditionalPresentation = () => {
-    if (currentCart.current.length < 1) {
-     
-      return <h2>Your cart is empty!</h2>;
-    } else {
-     
-      return (
-        <div className="cartItems">
-          {currentCart.current.map((item) => {
-            return (
-              <div key={item.itemName} className="cartCard">
-                <img
-                  className="cartImage"
-                  src={item.itemImage}
-                  alt={item.itemName}
-                />
-                <div className="cartUtils">
-                  <div className="cartInfo">
-                    <h5>{item.itemName}</h5>
-                    <p>${item.itemPrice}</p>
-                  </div>
-                </div>
-                <button type="button" className="removeButton" onClick={() => removeCart(item.itemName)}>Remove</button>
-              </div>
-            );
-          })}
-        </div>
-      );
-    }
-  };
 
-  useEffect(() => {
-    conditionalPresentation()
-})
+//   useEffect(() => {
+
+//     currentCart.current = cart;
+// })
   
   return (
     <div className={hidden}>
       <div className="cartBar">
         <p className="exit" onClick={() => close()}>X</p>
-        <div className="items">
-          {conditionalPresentation()}
-        </div>
+        <CartItems currentCart={currentCart} removeCart={removeCart()}/>
         {showCheckout()}
       </div>
     </div>
