@@ -258,7 +258,5 @@
 }
 
 .removed{
-  text-decoration: line-through;
-  color: darkgray;
-  background-color: lightgray;
+ display: none;
 }

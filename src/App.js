@@ -13,8 +13,8 @@ const App = () => {
   const [hidden, setHidden] = useState("cart hidden")
   const currentCart = useRef(cart);
 
-  const addCart = ({ itemName, itemPrice, itemImage }) => {
-    setCart([...cart, { itemName, itemPrice, itemImage }]);
+  const addCart = ({ itemName, itemPrice, itemImage, visible }) => {
+    setCart([...cart, { itemName, itemPrice, itemImage, visible }]);
   };
 
   const removeCart = (itemName) => {

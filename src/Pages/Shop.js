@@ -6,31 +6,37 @@ const Shop = ({addCart}) => {
       itemName: "Tulips",
       itemImage: "./images/tulips.jpg",
       itemPrice: 15,
+      visible: true,
     },
     {
       itemName: "Roses",
       itemImage: "./images/roses.jpg",
       itemPrice: 20,
+      visible: true,
     },
     {
       itemName: "Daisies",
       itemImage: "./images/daisies.jpg",
       itemPrice: 12,
+      visible: true,
     },
     {
       itemName: "Watering Can",
       itemImage: "./images/wateringCan.jpg",
       itemPrice: 25,
+      visible: true,
     },
     {
       itemName: "Shovel",
       itemImage: "./images/shovel.jpg",
       itemPrice: 10,
+      visible: true,
     },
     {
       itemName: "Gardening Gloves",
       itemImage: "./images/gardeningGloves.jpg",
       itemPrice: 14,
+      visible: true,
     },
   ];
 
