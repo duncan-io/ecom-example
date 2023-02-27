@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ecom-example/static/css/main.9f22306c.css",
-    "main.js": "/ecom-example/static/js/main.e19c916f.js",
+    "main.js": "/ecom-example/static/js/main.90b6fcbc.js",
     "static/media/gardeningHeaderImage.jpg": "/ecom-example/static/media/gardeningHeaderImage.19a22317ea51ed381286.jpg",
     "index.html": "/ecom-example/index.html",
     "main.9f22306c.css.map": "/ecom-example/static/css/main.9f22306c.css.map",
-    "main.e19c916f.js.map": "/ecom-example/static/js/main.e19c916f.js.map"
+    "main.90b6fcbc.js.map": "/ecom-example/static/js/main.90b6fcbc.js.map"
   },
   "entrypoints": [
     "static/css/main.9f22306c.css",
-    "static/js/main.e19c916f.js"
+    "static/js/main.90b6fcbc.js"
   ]
 }
