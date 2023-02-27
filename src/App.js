@@ -42,7 +42,7 @@ const App = () => {
       <UpdatedCart currentCart={currentCart} hidden={hidden} close={close}  cart={cart} removeCart = {removeCart} />
       <Nav close={close} cart={cart}/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/ecom-example" element={<Home />} />
         <Route path="/shop" element={<Shop addCart={addCart} />} />
         <Route path="/about" element={<About />} />
       </Routes>
